@@ -211,6 +211,7 @@ requests-mock = ">=1.12.1,<2"
 docutils = ">=0.20.1,<0.22"
 conda = "*"
 pip = "*"
+ipython = ">=9.8.0,<10"
 
 [tool.pixi.feature.test.pypi-dependencies]
 snakemake-executor-plugin-cluster-generic = "*"
