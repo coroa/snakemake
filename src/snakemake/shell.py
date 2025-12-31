@@ -274,6 +274,9 @@ class shell:
         envvars["MKL_NUM_THREADS"] = threads
         envvars["VECLIB_MAXIMUM_THREADS"] = threads
         envvars["NUMEXPR_NUM_THREADS"] = threads
+        # Prevent stdout buffering issues on Windows with multiple subprocesses
+        if ON_WINDOWS:
+            envvars["PYTHONUNBUFFERED"] = "1"
 
         if tmpdir_resource:
             envvars["TMPDIR"] = tmpdir_resource
