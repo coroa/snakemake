@@ -179,8 +179,6 @@ class shell:
 
         stdout = sp.PIPE if iterable or read else STDOUT
 
-        close_fds = sys.platform != "win32"
-
         func_context = inspect.currentframe().f_back.f_locals
 
         if func_context.get(RULEFUNC_CONTEXT_MARKER):
@@ -324,7 +322,7 @@ class shell:
             shell=use_shell,
             stdout=stdout,
             universal_newlines=iterable or read or None,
-            close_fds=close_fds,
+            close_fds=True,
             **process_args,
             env=envvars,
         )
