@@ -43,7 +43,6 @@ dependencies = [
   "nbformat",
   "packaging >=24.0,<26",
   "psutil",
-  "pulp>=2.3.1,<3.4",
   "pyyaml",
   "referencing",
   "requests>=2.8.1,<3.0",
